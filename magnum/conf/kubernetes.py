@@ -22,6 +22,9 @@ kubernetes_opts = [
                     'Keystone auth policy for Kubernetes cluster when '
                     'the Keystone auth is enabled. Vendors can put their '
                     'specific default policy here'),
+    cfg.StrOpt('kubeconfig',
+               default='/etc/magnum/kubernetes/kubeconfig',
+               help='Kubeconfig file used to take with seed cluster.')
     cfg.StrOpt('post_install_manifest_url',
                default="",
                help='An URL of the manifest file will be installed after '
